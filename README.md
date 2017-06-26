@@ -1,6 +1,9 @@
 # Steepest-descent-algorithm-Matlab-
- using MATLAB to do steepest descent algorithm(use Armijo) ,aiming at finding the extreme point of functions of one variable &amp; two variables,
-for the reason that matlab can't show Chinese note in .m ,the notes are all English
+ using MATLAB to do steepest descent algorithm(use Armijo) ,  
+ aiming at finding the extreme point of functions of one variable & two variables,  
+ 
+for the reason that matlab can't show Chinese note in .m ,the notes are all English  
+
 中文注释在experiment report里面。
 
 基于 MATLAB 的最速下降法实现 无约束优化问题指下列优化问题  
