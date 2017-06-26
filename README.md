@@ -4,6 +4,8 @@
  
 for the reason that matlab can't show Chinese note in .m ,the notes are all English  
 
+you can change the function in fun1.m or fun2.m
+
 中文注释在experiment report里面。
 
 基于 MATLAB 的最速下降法实现 无约束优化问题指下列优化问题  
@@ -41,4 +43,12 @@ f(xk + β^m*dk) ≤ f(xk) + ρ*β^m*gkT*dk
 
 程序包含4部分:分别是最速下降法主函数steepest1.m; 求梯度函数fun_grad1.m; 测试函数 fun1.m;Armijo 求步长因子函数 armijo1.m  
 
-（其余部分请阅读附带的pdf文档后半部分）
+![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/1.png) 
+![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/2.png)
+![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/3.png) 
+![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/4.png) 
+![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/5.png)
+![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/6.png)
+
+
+
