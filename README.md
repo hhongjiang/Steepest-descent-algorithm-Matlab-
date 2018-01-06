@@ -40,10 +40,10 @@ f(xk + β^m*dk) ≤ f(xk) + ρ*β^m*gkT*dk  <br>
 ### 三. Matlab实现  
 
 程序包含4部分,分别是:<br>
-最速下降法主函数steepest1.m; <br>
-求梯度函数fun_grad1.m; <br>
-测试函数 fun1.m;Armijo <br>
-求步长因子函数 armijo1.m<br>
+最速下降法主函数  `steepest1.m`; <br>
+求梯度函数 `fun_grad1.m`; <br>
+测试函数 `fun1.m`; <br>
+求Armijo步长因子函数 `armijo1.m`<br>
 
 ----------------------------
 
@@ -83,10 +83,10 @@ Step4.Caculate 'xk+1':xk+1 = xk + αkdk ，𝑘 = 𝑘 + 1; Turn to Step2.
 ### Matlab code structure:
 
 The codes are formed by four parts:<br>
-Main function of steepest descent method:'steepest1.m' <br>
-the function used to get the gratitude:'fun_grad1.m' <br>
-the testing function 'fun1.m' <br>
-the function used to get the step 'armijo1.m' <br>
+Main function of steepest descent method: `steepest1.m` <br>
+the function used to get the gratitude:`fun_grad1.m` <br>
+the testing function `fun1.m` <br>
+the function used to get the step `armijo1.m` <br>
 
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/1.png) 
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/2.png)
