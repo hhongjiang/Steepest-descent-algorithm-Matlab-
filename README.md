@@ -2,7 +2,7 @@
 
 用MATLAB实现最速下降法(使用梯度作为下降方向的无限制最优化方法)。使用Armijo准则找步长。<br>
 using MATLAB to do steepest descent algorithm（unconstrained optimization method that uses gratitude vector as descent direction）, and find steps by Armijo principle.<br>
-English explanation is placed behind the Chinese version.<br>
+English version is placed behind the Chinese one.<br>
  
 
 ### 一. 背景简述
