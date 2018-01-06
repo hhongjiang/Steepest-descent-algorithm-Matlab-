@@ -1,47 +1,92 @@
 # Steepest-descent-algorithm-Matlab-
- using MATLAB to do steepest descent algorithm(use Armijo) ,  
- aiming at finding the extreme point of functions of one variable & two variables,  
+
+用MATLAB实现最速下降法(使用梯度作为下降方向的无限制最优化方法)。使用Armijo准则找步长。<br>
+using MATLAB to do steepest descent algorithm（unconstrained optimization method that uses gratitude vector as descent direction）, and find steps by Armijo principle.<br>
+English explanation is placed behind the Chinese version.<br>
  
-for the reason that matlab can't show Chinese note in .m ,the notes are all English  
 
-you can change the function in fun1.m or fun2.m
+### 一. 背景简述
 
-中文注释在experiment report里面。
+#### 1.最速下降法的常用的迭代格式为  
 
-基于 MATLAB 的最速下降法实现 无约束优化问题指下列优化问题  
+>min f(x) <br> 
+>
+>xk+1 = xk + αkdk, k =0,1,...  <br>
+>
+>x0为初始向量，dk为f(x)在xk处的下降方向，αk > 0为步长。<br>
 
+在最速下降法中，dk取负梯度方向-gk。步长采用Armijo准则进行非精确一维搜索。<br>  
 
-一. 原理简述  
+#### 2.Armijo准则:  
 
-求解此类问题的常用的迭代格式为  
+设f(x)连续可微，dk是f(x)在xk处的下降方向，给定𝜌 ∈ (0, 1), β ∈ (0,1), 我们寻找使得下式成立的最小正整数𝑚𝑘 :  <br>
 
-min f(x)  
+f(xk + β^m*dk) ≤ f(xk) + ρ*β^m*gkT*dk  <br>
 
-xk+1 = xk + αkdk, k =0,1,...  
-
-x0为初始向量，dk为f(x)在xk处的下降方向，αk > 0为步长。在最速下降法中，dk取负梯度方向-gk。步长采用Armijo准则进行非精确一维搜索。  
-
-Armijo准则:  
-
-设f(x)连续可微，dk是f(x)在xk处的下降方向，给定𝜌 ∈ (0, 1), β ∈ (0,1), 我们寻找使得下式成立的最小正整数𝑚𝑘 :  
-
-f(xk + β^m*dk) ≤ f(xk) + ρ*β^m*gkT*dk  
-
-我们需要的步长𝛼𝑘 = 𝛽^𝑚𝑘  
+我们需要的步长𝛼𝑘 = 𝛽^𝑚𝑘   <br>
 
 
-二. 算法简述  
+### 二. 算法简述  
 
 步骤1:给出初值𝑥𝑜 以及精度eps  
 
-步骤2:计算gk = -∇f(xk);如果|gk| < eps,停止，输出𝑥𝑘;否则转步骤3。 步骤3.由Armijo准则搜索线性步长因子𝛼𝑘  
+步骤2:计算gk = -∇f(xk);如果|gk| < eps,停止，输出𝑥𝑘;否则转步骤3。 
+
+步骤3.由Armijo准则搜索线性步长因子𝛼𝑘  
 
 步骤4.计算xk+1 = xk + αkdk ，𝑘 = 𝑘 + 1,转步骤2.  
 
 
-三. Matlab实现  
+### 三. Matlab实现  
 
-程序包含4部分:分别是最速下降法主函数steepest1.m; 求梯度函数fun_grad1.m; 测试函数 fun1.m;Armijo 求步长因子函数 armijo1.m  
+程序包含4部分,分别是:<br>
+最速下降法主函数steepest1.m; <br>
+求梯度函数fun_grad1.m; <br>
+测试函数 fun1.m;Armijo <br>
+求步长因子函数 armijo1.m<br>
+
+----------------------------
+
+### I.Background explanation
+
+#### 1.The literation form of steepest descent algorithm:<br>
+
+>min f(x)
+>
+>xk+1 = xk + αkdk, k =0,1,...
+>
+>x0 is the initialization vector，dk is the descent direction of f(x) at xk.<br>
+
+In steepest descent algorithm, dk = -gk, where gk is gratitude vector. <br>
+Here I use Armijo principle to set the steps of inexact line search .<br>
+
+#### II.Armijo Principle
+
+Set f(x) to be continuously differential，and dk is the descent direction of f(x) at xk,<br>
+
+Given 𝜌 ∈ (0, 1), β ∈ (0,1), we are trying to find the least possible integer that satisfy the following inequality:<br>
+
+f(xk + β^m*dk) ≤ f(xk) + ρ*β^m*gkT*dk <br>
+
+And the step we actually need is such: 𝛼𝑘 = 𝛽^𝑚𝑘   <br>
+
+### II.Steps of the algorithm<br>
+
+Step1.Set the initial vlue x0 and precision eps<br>
+
+Step2.Calculate 'gk':gk = -∇f(xk); If |gk| < eps, stop and output xk; Otherwise, turn to Step 3.
+
+Step3.Set the step 𝛼𝑘 by Armijo principle.
+
+Step4.Caculate 'xk+1':xk+1 = xk + αkdk ，𝑘 = 𝑘 + 1; Turn to Step2.
+
+### Matlab code structure:
+
+The codes are formed by four parts:<br>
+Main function of steepest descent method:'steepest1.m' <br>
+the function used to get the gratitude:'fun_grad1.m' <br>
+the testing function 'fun1.m' <br>
+the function used to get the step 'armijo1.m' <br>
 
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/1.png) 
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/2.png)
