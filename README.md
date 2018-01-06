@@ -85,8 +85,8 @@ Step4.Caculate 'xk+1':xk+1 = xk + αkdk ，𝑘 = 𝑘 + 1; Turn to Step2.
 The codes are formed by four parts:<br>
 Main function of steepest descent method: `steepest1.m` <br>
 the function used to get the gratitude:`fun_grad1.m` <br>
-the testing function `fun1.m` <br>
-the function used to get the step `armijo1.m` <br>
+the testing function :`fun1.m` <br>
+the function used to get the step :`armijo1.m` <br>
 
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/1.png) 
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/2.png)
