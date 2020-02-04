@@ -95,5 +95,8 @@ the function used to get the step :`armijo1.m` <br>
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/5.png)
 ![Alt text](https://github.com/liferjane/Steepest-descent-algorithm-Matlab-/blob/master/Screenshots/6.png)
 
+.  
+.
+.
 
 
